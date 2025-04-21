@@ -1,0 +1,60 @@
+\documentclass{book}
+\usepackage{lscape}  
+ 
+
+\title{A Simple LaTeX Book Example}
+\author{Harshvardhan Pujari}
+\date{\today}
+
+\begin{document}
+	
+	\maketitle  
+	
+	\tableofcontents  
+	\newpage
+	
+	\chapter{Introduction}
+
+	
+	LaTeX is a typesetting system used for producing high-quality documents\footnote{LaTeX was originally developed by Leslie Lamport in the early 1980s.}. It separates content from style, helping writers focus on structure and logic rather than design.
+	
+	\section{Why Use LaTeX?}
+	
+	LaTeX automatically formats things like citations, references, and figures. For example, this very sentence is on page~\thepage.
+	
+	\newpage  
+	
+	\chapter{Landscape Example}
+	
+	Sometimes you might want a wide table or image that fits better on a landscape page. You can switch to landscape like this:
+	
+	\begin{landscape}
+		\section{Wide Table}
+		
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			Chapter & Title & Pages & Notes \\
+			\hline
+			1 & Introduction & 1-5 & Basics of LaTeX \\
+			2 & Getting Started & 6-12 & Sample syntax \\
+			3 & Landscape Example & 13-15 & Wide tables/images \\
+			4 & Conclusion & 16 & Wrap-up thoughts \\
+			\hline
+		\end{tabular}
+	\end{landscape}
+	
+	\newpage 
+	
+	\chapter{Conclusion}
+	
+	Using LaTeX for writing books makes it easy to handle:
+	\begin{itemize}
+		\item Automatic Table of Contents
+		\item Page numbering
+		\item Cross-references
+		\item Footnotes\footnote{This is another footnote, useful for explanations.}
+	\end{itemize}
+	
+	And as you’ve seen, you can also create landscape pages for wide content.
+	
+\end{document}

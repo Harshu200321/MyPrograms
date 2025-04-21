@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Medical Record Layout</title>
+  <style>
+    body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 250px;
+  background: #f0e6b6;
+  padding: 10px;
+}
+
+.sidebar button {
+  width: 100%;
+  margin: 8px 0;
+  padding: 15px;
+  background: #ffe680;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.sidebar button:hover {
+  background: #ffdb4d;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff8e1;
+  font-size: 28px;
+}
+
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="sidebar">
+    <button onclick="loadContent('title')">Title Info</button>
+    <button onclick="loadContent('last')">Last Record</button>
+    <button onclick="loadContent('admissions')">All Admissions</button>
+    <button onclick="loadContent('labs')">Labs</button>
+    <button onclick="loadContent('imaging')">Imaging</button>
+  </div>
+
+  <div class="main-content" id="main-content">
+    Entire History Summary
+  </div>
+</div>
+
+<script>
+  function loadContent(section) {
+    const contentMap = {
+      title: "Here is the patient's title and basic info.",
+      last: "This is the most recent medical record.",
+      admissions: "List of all past admissions.",
+      labs: "Latest lab reports and diagnostics.",
+      imaging: "MRI, X-ray, and other imaging results."
+    };
+
+    const contentArea = document.getElementById("main-content");
+    contentArea.innerHTML = contentMap[section] || "Entire History Summary";
+  }
+</script>
+
+</body>
+</html>
